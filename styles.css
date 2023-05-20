@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+:root {
+    --Montserrat:  'Montserrat', sans-serif;
+    --Fraunces: 'Fraunces', serif;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #f3eae3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+#Canvas {
+    width: 100%;
+    max-width: 34rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: fit-content;
+}
+#Canvas img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+#Canvas div {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    padding: 25px 25px;
+    background-color: #ffffff;
+}
+#Canvas div h6 {
+    font-size: 0.6rem;
+    letter-spacing: 0.30rem;
+    text-transform: uppercase;
+    font-family: var(--Montserrat);
+    color: hsl(228, 12%, 48%);
+}
+#Canvas div h1 {
+    font-family: var(--Fraunces);
+    font-size: 1.95rem;
+}
+#Canvas div p {
+    font-family: var(--Montserrat);
+    font-size: 0.8rem;
+    line-height: 1.75;
+}
+#Canvas div h2 {
+    color: hsl(158, 36%, 37%);
+    font-family: var(--Fraunces);
+    font-size: 1.65rem;
+}
+#Canvas div h2 del {
+    color: hsl(228, 12%, 48%);
+    font-size: 0.725rem;
+    font-family: var(--Montserrat);
+    position: relative;
+    left: 5px;
+    bottom: 7px;
+}
+#Canvas div button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    color: #fff;
+    font-family: var(--Montserrat);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#Canvas div button img {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    right: 5px;
+}
+#Canvas div button:hover {
+    filter: brightness(75%);
+}
+@media (max-width: 600px) {
+    #Canvas {
+        grid-template-columns: 1fr;
+        max-width: 23rem;
+    }
+    #Canvas img {
+        height: 15rem;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    } 
+    #Canvas div {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+        padding: 25px 35px;
+    }
+    #Canvas div p {
+        font-size: 0.85rem;
+    }
+}
